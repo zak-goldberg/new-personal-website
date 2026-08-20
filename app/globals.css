@@ -1,0 +1,125 @@
+:root {
+  --ink: #1d1c27;
+  --paper: #f7f5ed;
+  --electric: #4c35ff;
+  --lime: #d8ff4e;
+  --line: #1d1c27;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+a { color: inherit; text-decoration: none; }
+
+main { overflow: hidden; }
+
+.site-nav {
+  align-items: center;
+  border-bottom: 2px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem clamp(1.25rem, 5vw, 5rem);
+}
+
+.wordmark, .eyebrow, .nav-links, .timeline-number, footer {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.wordmark { font-size: 0.85rem; }
+
+.nav-links { display: flex; font-size: 0.8rem; gap: 1.25rem; }
+
+.nav-links a:hover { color: var(--electric); }
+
+.hero, .journey, .next-section { padding: clamp(3.5rem, 9vw, 8rem) clamp(1.25rem, 5vw, 5rem); }
+
+.hero { background: var(--lime); border-bottom: 2px solid var(--line); }
+
+.eyebrow { font-size: 0.75rem; margin: 0 0 1rem; }
+
+.hero-grid {
+  align-items: start;
+  display: grid;
+  gap: clamp(1rem, 2vw, 2rem);
+  grid-template-columns: minmax(0, 50rem) minmax(12rem, 20rem);
+  justify-content: start;
+}
+
+h1, h2, h3, p { margin-top: 0; }
+
+h1 {
+  font-size: clamp(2.6rem, 6.6vw, 6.8rem);
+  letter-spacing: -0.065em;
+  line-height: 0.92;
+  margin-bottom: 2rem;
+  max-width: 12ch;
+}
+
+h2 { font-size: clamp(2rem, 4.5vw, 4.8rem); letter-spacing: -0.055em; line-height: 0.96; max-width: 14ch; }
+
+.intro { font-family: "Courier New", Courier, monospace; font-size: clamp(1rem, 1.6vw, 1.35rem); font-weight: bold; }
+
+.portrait {
+  aspect-ratio: 1;
+  background: var(--electric);
+  border: 10px double var(--ink);
+  box-shadow: 10px 10px 0 var(--ink);
+  overflow: hidden;
+  position: relative;
+}
+
+.portrait img { image-rendering: pixelated; object-fit: contain; object-position: bottom; }
+
+.section-heading { margin-bottom: 3rem; }
+
+.journey-intro { font-size: 1rem; line-height: 1.45; max-width: 44rem; }
+
+.timeline {
+  counter-reset: timeline;
+  display: grid;
+  gap: 0;
+  grid-template-columns: repeat(6, minmax(160px, 1fr));
+  list-style: none;
+  margin: 0;
+  overflow-x: auto;
+  padding: 0 0 1rem;
+}
+
+.timeline li {
+  border-left: 2px solid var(--line);
+  min-height: 12rem;
+  padding: 1rem 1.2rem;
+  position: relative;
+}
+
+.timeline li:last-child { border-right: 2px solid var(--line); }
+.timeline li::before { background: var(--electric); border: 2px solid var(--line); content: ""; height: 0.8rem; left: -0.48rem; position: absolute; top: -0.43rem; width: 0.8rem; }
+.timeline-number { color: var(--electric); display: block; font-size: 0.75rem; }
+.timeline-context { display: block; font-family: "Courier New", Courier, monospace; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em; margin-top: 0.5rem; text-transform: uppercase; }
+.timeline h3 { font-size: 1.25rem; letter-spacing: -0.04em; line-height: 1; margin: 1.2rem 0 0.75rem; }
+.timeline p { font-size: 0.9rem; line-height: 1.35; }
+
+.next-section { background: var(--ink); color: var(--paper); min-height: 50vh; }
+.next-section h2 { max-width: 12ch; }
+.next-section > p:last-child { max-width: 32rem; }
+
+footer { align-items: center; display: flex; font-size: 0.7rem; justify-content: space-between; padding: 1rem clamp(1.25rem, 5vw, 5rem); }
+
+@media (max-width: 620px) {
+  .site-nav { align-items: flex-start; gap: 1rem; }
+  .nav-links { flex-wrap: wrap; justify-content: flex-end; }
+  .hero-grid { grid-template-columns: 1fr; }
+  .portrait { max-width: 12rem; }
+  .timeline { grid-template-columns: repeat(6, 12rem); }
+  footer { align-items: flex-start; flex-direction: column; gap: 0.5rem; }
+}

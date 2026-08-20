@@ -30,6 +30,8 @@ Items without an existing decision are intentionally left blank.
 
 - The homepage concept is a horizontal timeline.
 - The timeline should tell the career story through accumulated perspectives and learning, rather than promotions.
+- The timeline should show how each stage builds on the last into useful work, rather than presenting disconnected perspectives.
+- Timeline entries should distinguish UVa, Amazon, and Salesforce.
 - A wireframe was requested in a modern / GeoCities theme.
 - The top-left computer in that wireframe should be replaced with a picture of Zak in the same 8-bit style.
 
