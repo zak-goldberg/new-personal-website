@@ -86,6 +86,34 @@ Family pictures and hobbies.
 ### Contact
 
 
+## Delivery phases
+
+### P0: Static foundation and infrastructure
+
+- Initialize the static Next.js site.
+- Build and iterate on the homepage.
+- Set up Vercel deployment.
+- Connect and cut over the existing `zak-goldberg.dev` domain and DNS.
+- Set up Cloudflare R2 for media.
+
+### P1: Public site content
+
+- Add and iterate on the remaining public content and project pages.
+
+### P2: Dynamic-app design
+
+- Define the design and requirements for future dynamic capabilities.
+- Address user flows, data model, authentication, content administration, private-media requirements, and API boundaries.
+
+### P3 and later: Dynamic capabilities
+
+- Implement dynamic capabilities after their P2 requirements are defined.
+
+### Media dependency
+
+- Public media assets can be used during P0 and P1.
+- Private media, including family photos, should wait until P2 establishes access and delivery requirements.
+
 ## Technical and media constraints
 
 - Frontend: Next.js, React, and TypeScript.
@@ -96,7 +124,6 @@ Family pictures and hobbies.
 
 ## Open decisions
 
-- Domain and DNS configuration
 - Public versus private media
 - Final page structure beyond the homepage and project pages
 - Final visual system
