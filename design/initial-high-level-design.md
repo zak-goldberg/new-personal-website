@@ -76,6 +76,11 @@ Horizontal career timeline.
 
 ### Enhanced CV
 
+- Public static route: `/cv`.
+- The page provides an employer-friendly, expandable career narrative with contact links and a downloadable CV.
+- The downloadable artifact is a separate, ATS-friendly two-page PDF. It shares vetted facts with the page but uses a conventional, print-oriented layout rather than the site's retro accents.
+- Salesforce work is described with anonymized system context and approved broad metrics; internal system names, work-item identifiers, and implementation details remain unpublished.
+
 
 ### Projects
 

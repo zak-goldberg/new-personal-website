@@ -16,6 +16,7 @@ export default function Home() {
         <a className="wordmark" href="#top">ZAK GOLDBERG</a>
         <div className="nav-links">
           <a href="#journey">Journey</a>
+          <a href="/cv">CV</a>
           <a href="#projects">Projects</a>
           <a href="#about">About</a>
         </div>

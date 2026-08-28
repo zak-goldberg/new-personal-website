@@ -40,6 +40,7 @@ main { overflow: hidden; }
 .nav-links { display: flex; font-size: 0.8rem; gap: 1.25rem; }
 
 .nav-links a:hover { color: var(--electric); }
+.nav-links a[aria-current="page"] { color: var(--electric); text-decoration: underline; text-underline-offset: 0.25rem; }
 
 .hero, .journey, .next-section { padding: clamp(3.5rem, 9vw, 8rem) clamp(1.25rem, 5vw, 5rem); }
 
@@ -115,6 +116,68 @@ h2 { font-size: clamp(2rem, 4.5vw, 4.8rem); letter-spacing: -0.055em; line-heigh
 
 footer { align-items: center; display: flex; font-size: 0.7rem; justify-content: space-between; padding: 1rem clamp(1.25rem, 5vw, 5rem); }
 
+.cv-page { background: var(--paper); }
+.cv-hero { background: var(--lime); border-bottom: 2px solid var(--line); padding: clamp(3.5rem, 8vw, 7rem) clamp(1.25rem, 5vw, 5rem) 1.5rem; }
+.cv-hero-grid { align-items: end; display: grid; gap: 2rem; grid-template-columns: minmax(0, 1fr) minmax(11.5rem, 14rem); }
+.cv-hero h1 { font-size: clamp(2.8rem, 6vw, 6.2rem); max-width: none; }
+.cv-hero h1 span { display: block; }
+.cv-summary { font-size: clamp(1.1rem, 1.8vw, 1.4rem); grid-column: 1 / -1; line-height: 1.42; margin-bottom: 0; max-width: 62rem; }
+.cv-actions { display: flex; flex-direction: column; gap: 0.75rem; min-width: 11.5rem; }
+.button { border: 2px solid var(--line); display: inline-flex; font-family: "Courier New", Courier, monospace; font-size: 0.78rem; font-weight: 700; justify-content: space-between; letter-spacing: 0.04em; padding: 0.8rem 0.9rem; text-transform: uppercase; }
+.button-primary { background: var(--ink); color: var(--paper); }
+.button-secondary { background: var(--paper); }
+.button:hover { background: var(--electric); color: white; }
+.cv-meta { border-top: 2px solid var(--line); display: flex; flex-wrap: wrap; font-family: "Courier New", Courier, monospace; font-size: 0.73rem; font-weight: 700; gap: 0.7rem 1.5rem; letter-spacing: 0.025em; margin-top: 3rem; padding-top: 1rem; }
+.cv-meta a { text-decoration: underline; text-underline-offset: 0.2rem; }
+.cv-section { padding: clamp(3.5rem, 8vw, 7rem) clamp(1.25rem, 5vw, 5rem); }
+.cv-section-heading { margin-bottom: 3rem; }
+.cv-section-heading h2, .cv-bottom-grid h2 { max-width: none; }
+.capabilities { border-bottom: 2px solid var(--line); }
+.capability-grid { border-top: 2px solid var(--line); display: grid; grid-template-columns: repeat(3, 1fr); }
+.capability { border-left: 2px solid var(--line); padding: 1rem 1.5rem 1.5rem; }
+.capability:last-child { border-right: 2px solid var(--line); }
+.capability > span { color: var(--electric); font-family: "Courier New", Courier, monospace; font-size: 0.76rem; font-weight: 700; }
+.capability h3 { font-size: clamp(1.35rem, 2vw, 1.8rem); letter-spacing: -0.04em; margin: 2rem 0 0.75rem; }
+.capability p, .role li, .skill-copy, .cv-bottom-grid > div > p:not(.eyebrow):not(.education-school):not(.education-date) { line-height: 1.5; }
+.agent-systems { background: #efedff; border-bottom: 2px solid var(--line); }
+.agent-systems .cv-section-heading { margin-bottom: 2rem; }
+.agent-definition { font-size: clamp(1.05rem, 1.7vw, 1.28rem); line-height: 1.45; max-width: 54rem; }
+.agent-case { border-block: 2px solid var(--line); display: grid; gap: 1.5rem; grid-template-columns: minmax(10rem, 0.32fr) 1fr; margin-bottom: 0; padding: 1.25rem 0; }
+.agent-case p { font-size: clamp(1.1rem, 2vw, 1.55rem); letter-spacing: -0.025em; line-height: 1.38; margin: 0; max-width: 52rem; }
+.agent-case .agent-kicker { color: var(--electric); font-family: "Courier New", Courier, monospace; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; }
+.agent-workflow { display: grid; grid-template-columns: repeat(3, 1fr); }
+.agent-workflow article { border-left: 2px solid var(--line); padding: 1.1rem 1.4rem 0.4rem; }
+.agent-workflow article:last-child { border-right: 2px solid var(--line); }
+.agent-workflow span { color: var(--electric); font-family: "Courier New", Courier, monospace; font-size: 0.76rem; font-weight: 700; }
+.agent-workflow h3 { font-size: clamp(1.3rem, 2vw, 1.7rem); letter-spacing: -0.04em; margin: 1.75rem 0 0.75rem; }
+.agent-workflow p { line-height: 1.5; }
+.agent-feedback { border: 2px solid var(--line); margin: 2.5rem 0 0; padding: 1.25rem; }
+.agent-feedback figcaption { display: flex; font-family: "Courier New", Courier, monospace; font-size: 0.74rem; font-weight: 700; gap: 0.75rem 1.5rem; justify-content: space-between; letter-spacing: 0.04em; text-transform: uppercase; }
+.agent-feedback figcaption span:first-child { color: var(--electric); }
+.agent-feedback blockquote { font-size: clamp(1.05rem, 1.7vw, 1.35rem); letter-spacing: -0.025em; line-height: 1.43; margin: 1.5rem 0 0.85rem; max-width: 62rem; }
+.agent-feedback > p { font-family: "Courier New", Courier, monospace; font-size: 0.73rem; margin: 0; }
+.experience { background: #fff; }
+.experience-list { border-top: 2px solid var(--line); }
+.role { border-bottom: 2px solid var(--line); display: grid; gap: 2rem; grid-template-columns: minmax(9rem, 0.35fr) 1fr; padding: 1.5rem 0; }
+.role-current { background: #f1efff; margin-inline: -1rem; padding-inline: 1rem; }
+.role-meta, .role-company, .education-date { font-family: "Courier New", Courier, monospace; font-size: 0.74rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; }
+.role-meta p { margin-bottom: 0.4rem; }
+.role-company { color: var(--electric); margin-bottom: 0.6rem; }
+.role h3 { font-size: clamp(1.5rem, 2.6vw, 2.4rem); letter-spacing: -0.05em; margin-bottom: 1rem; }
+.role-intro { font-size: 1.05rem; line-height: 1.45; margin-bottom: 1rem; }
+.role ul { margin: 0; padding-left: 1.15rem; }
+.role li { margin-bottom: 0.75rem; max-width: 54rem; }
+.role li:last-child { margin-bottom: 0; }
+.cv-bottom-grid { border-bottom: 2px solid var(--line); display: grid; gap: clamp(2rem, 8vw, 8rem); grid-template-columns: 1.35fr 0.65fr; }
+.cv-bottom-grid h2 { font-size: clamp(2rem, 3.7vw, 3.7rem); margin-bottom: 2rem; }
+.skill-copy { max-width: 42rem; }
+.education-school { font-size: 1.2rem; font-weight: 700; margin-bottom: 0.3rem; }
+.education-date { margin-top: 1.5rem; }
+.cv-contact { background: var(--ink); color: var(--paper); padding: clamp(3.5rem, 8vw, 7rem) clamp(1.25rem, 5vw, 5rem); }
+.cv-contact h2 { font-size: clamp(2.8rem, 6vw, 6.2rem); max-width: none; }
+.email-link { border-bottom: 2px solid var(--lime); color: var(--lime); display: inline-block; font-family: "Courier New", Courier, monospace; font-size: clamp(1rem, 2vw, 1.4rem); font-weight: 700; padding-bottom: 0.35rem; }
+.email-link:hover { color: white; }
+
 @media (max-width: 620px) {
   .site-nav { align-items: flex-start; gap: 1rem; }
   .nav-links { flex-wrap: wrap; justify-content: flex-end; }
@@ -122,4 +185,16 @@ footer { align-items: center; display: flex; font-size: 0.7rem; justify-content:
   .portrait { max-width: 12rem; }
   .timeline { grid-template-columns: repeat(6, 12rem); }
   footer { align-items: flex-start; flex-direction: column; gap: 0.5rem; }
+  .cv-hero-grid, .cv-bottom-grid { grid-template-columns: 1fr; }
+  .cv-actions { max-width: 17rem; }
+  .capability-grid { grid-template-columns: 1fr; }
+  .capability { border-left: 0; border-bottom: 2px solid var(--line); padding-inline: 0; }
+  .capability:last-child { border-bottom: 0; border-right: 0; }
+  .agent-case { grid-template-columns: 1fr; gap: 0.65rem; }
+  .agent-workflow { grid-template-columns: 1fr; }
+  .agent-workflow article { border-bottom: 2px solid var(--line); border-left: 0; padding-inline: 0; }
+  .agent-workflow article:last-child { border-bottom: 0; border-right: 0; }
+  .agent-feedback figcaption { align-items: flex-start; flex-direction: column; gap: 0.35rem; }
+  .role { grid-template-columns: 1fr; gap: 0.5rem; }
+  .role-current { margin-inline: 0; padding-inline: 0; }
 }

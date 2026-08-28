@@ -16,6 +16,7 @@ This directory is the workspace for the new personal website.
 - Lead with: "I build software, solve business problems, and enjoy learning new disciplines."
 - The homepage concept is a modern geosites-inspired horizontal career timeline.
 - Use a friendly, exploratory portfolio feel instead of a trophy-case presentation.
+- For website design, content, UX, project pages, or related architecture decisions, read and follow `skills/zak-personal-website/SKILL.md`.
 
 ## Working conventions
 
