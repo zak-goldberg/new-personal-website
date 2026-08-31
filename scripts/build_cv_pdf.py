@@ -10,20 +10,21 @@ from reportlab.platypus import HRFlowable, KeepTogether, ListFlowable, ListItem,
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "output" / "pdf" / "zak-goldberg-cv.pdf"
 
-INK = colors.HexColor("#1D1C27")
-INDIGO = colors.HexColor("#4C35FF")
-LIME = colors.HexColor("#D8FF4E")
-MUTED = colors.HexColor("#5C5A68")
+INK = colors.HexColor("#17212B")
+NAVY = colors.HexColor("#12324A")
+ACCENT = colors.HexColor("#2B6D80")
+MUTED = colors.HexColor("#596775")
+RULE = colors.HexColor("#C9D1D8")
 
 styles = getSampleStyleSheet()
-styles.add(ParagraphStyle(name="CvName", parent=styles["Normal"], fontName="Helvetica-Bold", fontSize=25, leading=28, textColor=INK, spaceAfter=4))
-styles.add(ParagraphStyle(name="CvTitle", parent=styles["Normal"], fontName="Helvetica-Bold", fontSize=10, leading=14, textColor=INDIGO, spaceAfter=5))
-styles.add(ParagraphStyle(name="CvContact", parent=styles["Normal"], fontName="Helvetica", fontSize=8.5, leading=12, textColor=MUTED, spaceAfter=12))
-styles.add(ParagraphStyle(name="CvSection", parent=styles["Normal"], fontName="Helvetica-Bold", fontSize=9, leading=12, textColor=INDIGO, spaceBefore=11, spaceAfter=4, uppercase=True))
-styles.add(ParagraphStyle(name="CvSummary", parent=styles["Normal"], fontName="Helvetica", fontSize=9.1, leading=13, textColor=INK, spaceAfter=7))
-styles.add(ParagraphStyle(name="CvRole", parent=styles["Normal"], fontName="Helvetica-Bold", fontSize=10.5, leading=13, textColor=INK, spaceBefore=8, spaceAfter=1))
-styles.add(ParagraphStyle(name="CvRoleMeta", parent=styles["Normal"], fontName="Helvetica", fontSize=8.4, leading=11, textColor=MUTED, spaceAfter=4))
-styles.add(ParagraphStyle(name="CvBullet", parent=styles["Normal"], fontName="Helvetica", fontSize=8.4, leading=11.4, leftIndent=12, firstLineIndent=-7, textColor=INK, spaceAfter=2))
+styles.add(ParagraphStyle(name="CvName", parent=styles["Normal"], fontName="Helvetica-Bold", fontSize=25, leading=28, textColor=NAVY, spaceAfter=3))
+styles.add(ParagraphStyle(name="CvTitle", parent=styles["Normal"], fontName="Helvetica-Bold", fontSize=9.5, leading=13, textColor=ACCENT, spaceAfter=4))
+styles.add(ParagraphStyle(name="CvContact", parent=styles["Normal"], fontName="Helvetica", fontSize=8.5, leading=12, textColor=MUTED, spaceAfter=10))
+styles.add(ParagraphStyle(name="CvSection", parent=styles["Normal"], fontName="Helvetica-Bold", fontSize=8.6, leading=11, textColor=ACCENT, spaceBefore=10, spaceAfter=3, uppercase=True, tracking=0.6))
+styles.add(ParagraphStyle(name="CvSummary", parent=styles["Normal"], fontName="Helvetica", fontSize=9.2, leading=13.2, textColor=INK, spaceAfter=6))
+styles.add(ParagraphStyle(name="CvRole", parent=styles["Normal"], fontName="Helvetica-Bold", fontSize=10.4, leading=13, textColor=NAVY, spaceBefore=8, spaceAfter=1))
+styles.add(ParagraphStyle(name="CvRoleMeta", parent=styles["Normal"], fontName="Helvetica", fontSize=8.3, leading=10.5, textColor=MUTED, spaceAfter=4))
+styles.add(ParagraphStyle(name="CvBullet", parent=styles["Normal"], fontName="Helvetica", fontSize=8.35, leading=11.25, leftIndent=12, firstLineIndent=-7, textColor=INK, spaceAfter=2))
 styles.add(ParagraphStyle(name="CvSkill", parent=styles["Normal"], fontName="Helvetica", fontSize=8.5, leading=12, textColor=INK, spaceAfter=4))
 
 def p(text, style):
@@ -37,12 +38,12 @@ def role(company, title, dates, items):
 
 def footer(canvas, doc):
     canvas.saveState()
-    canvas.setStrokeColor(INK)
-    canvas.setLineWidth(0.5)
+    canvas.setStrokeColor(RULE)
+    canvas.setLineWidth(0.65)
     canvas.line(doc.leftMargin, 0.43 * inch, letter[0] - doc.rightMargin, 0.43 * inch)
     canvas.setFont("Helvetica", 7)
     canvas.setFillColor(MUTED)
-    canvas.drawString(doc.leftMargin, 0.28 * inch, "ZAK GOLDBERG | CURIOSITY BACKED BY EXECUTION")
+    canvas.drawString(doc.leftMargin, 0.28 * inch, "ZAK GOLDBERG")
     canvas.drawRightString(letter[0] - doc.rightMargin, 0.28 * inch, f"PAGE {doc.page}")
     canvas.restoreState()
 
@@ -53,13 +54,13 @@ def main():
         p("Zak Goldberg", "CvName"),
         p("SOFTWARE BUILDER | SYSTEMS THINKER | TECHNICAL LEADER", "CvTitle"),
         p("San Francisco Bay Area | zak.goldberg@gmail.com | linkedin.com/in/zak-goldberg", "CvContact"),
-        HRFlowable(width="100%", thickness=1.4, color=INK, spaceAfter=9),
-        p("Summary", "CvSection"),
-        p("Software builder with experience across backend engineering, large-scale operations, technical program management, and engineering leadership. I find the real problem, understand system constraints, and build durable fixes. Current practice includes Java, distributed systems, operational reliability, and human-agent engineering systems.", "CvSummary"),
+        HRFlowable(width="100%", thickness=0.8, color=RULE, spaceAfter=8),
+        p("Professional Profile", "CvSection"),
+        p("Software builder and technical leader with experience across backend engineering, large-scale operations, technical program management, and engineering leadership. I turn ambiguity into meaningful impact by understanding system constraints, aligning people around the right problem, and delivering durable improvements.", "CvSummary"),
         p("Core Strengths", "CvSection"),
-        p("Backend and distributed systems | APIs, persistence, concurrency, and automated testing | Operational reliability and incident response | Technical strategy and cross-functional execution | Human-agent engineering: Claude, Codex, OpenCode, reusable skills, agents, and quality gates", "CvSkill"),
-        p("Human-agent engineering systems", "CvSection"),
-        p("Design shared context, workflows, autonomy boundaries, and quality checks that let engineers and coding agents contribute reliably across the software-development lifecycle.", "CvSkill"),
+        p("Backend and distributed systems | APIs, persistence, concurrency, and automated testing | Operational reliability and incident response | Technical strategy and cross-functional execution", "CvSkill"),
+        p("AI-Embedded Engineering Practice", "CvSection"),
+        p("I embed AI in how I explore problems, shape design decisions, and build software - from using agents as critical collaborators in early design work to orchestrating repeatable development and verification workflows. I am building practical experience designing environments where agents have the context, boundaries, and feedback loops to contribute reliably alongside people. Current practice includes Claude, Codex, and OpenCode; reusable skills and agents; and quality gates.", "CvSkill"),
         p("Experience", "CvSection"),
         role("Salesforce", "Software Engineer", "February 2025 - Present | San Francisco Bay Area", [
             "Design and deliver reliability-critical backend improvements for a real-time infrastructure-protection platform, including persistence architecture, production issue resolution, and safe phased rollouts.",
@@ -99,7 +100,6 @@ def main():
         p("<b>University of Virginia</b> | BS, Civil &amp; Environmental Engineering; BA, Economics | December 2013", "CvSkill"),
         p("Technical Practice", "CvSection"),
         p("<b>Software systems:</b> Java, backend and distributed systems, REST APIs, persistence, concurrency, automated testing, observability, and incident response.", "CvSkill"),
-        p("<b>Human-agent engineering:</b> Claude, Codex, and OpenCode; reusable skills, agents, documentation systems, and quality gates that make useful context easier to find and apply while improving the system through use.", "CvSkill"),
         p("<b>Cross-functional delivery:</b> technical strategy, roadmap planning, requirements, stakeholder alignment, mentoring, and translating operational needs into practical software outcomes.", "CvSkill"),
     ]
     doc.build(story, onFirstPage=footer, onLaterPages=footer)

@@ -132,6 +132,16 @@ footer { align-items: center; display: flex; font-size: 0.7rem; justify-content:
 .cv-section { padding: clamp(3.5rem, 8vw, 7rem) clamp(1.25rem, 5vw, 5rem); }
 .cv-section-heading { margin-bottom: 3rem; }
 .cv-section-heading h2, .cv-bottom-grid h2 { max-width: none; }
+.cv-disclosure { padding: 0; }
+.cv-disclosure > summary { align-items: center; cursor: pointer; display: flex; gap: 2rem; justify-content: space-between; list-style: none; padding: clamp(2rem, 5vw, 4rem) clamp(1.25rem, 5vw, 5rem); }
+.cv-disclosure > summary::-webkit-details-marker { display: none; }
+.cv-disclosure > summary .eyebrow { display: block; margin-bottom: 0.75rem; }
+.cv-disclosure > summary h2 { margin-bottom: 0; max-width: none; }
+.disclosure-toggle { border-bottom: 2px solid currentColor; flex: 0 0 auto; font-family: "Courier New", Courier, monospace; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.04em; padding-bottom: 0.25rem; text-transform: uppercase; }
+.disclosure-open { display: none; }
+.cv-disclosure[open] .disclosure-closed { display: none; }
+.cv-disclosure[open] .disclosure-open { display: inline; }
+.cv-disclosure-content { padding: 0 clamp(1.25rem, 5vw, 5rem) clamp(3.5rem, 8vw, 7rem); }
 .capabilities { border-bottom: 2px solid var(--line); }
 .capability-grid { border-top: 2px solid var(--line); display: grid; grid-template-columns: repeat(3, 1fr); }
 .capability { border-left: 2px solid var(--line); padding: 1rem 1.5rem 1.5rem; }
@@ -140,17 +150,10 @@ footer { align-items: center; display: flex; font-size: 0.7rem; justify-content:
 .capability h3 { font-size: clamp(1.35rem, 2vw, 1.8rem); letter-spacing: -0.04em; margin: 2rem 0 0.75rem; }
 .capability p, .role li, .skill-copy, .cv-bottom-grid > div > p:not(.eyebrow):not(.education-school):not(.education-date) { line-height: 1.5; }
 .agent-systems { background: #efedff; border-bottom: 2px solid var(--line); }
-.agent-systems .cv-section-heading { margin-bottom: 2rem; }
 .agent-definition { font-size: clamp(1.05rem, 1.7vw, 1.28rem); line-height: 1.45; max-width: 54rem; }
 .agent-case { border-block: 2px solid var(--line); display: grid; gap: 1.5rem; grid-template-columns: minmax(10rem, 0.32fr) 1fr; margin-bottom: 0; padding: 1.25rem 0; }
 .agent-case p { font-size: clamp(1.1rem, 2vw, 1.55rem); letter-spacing: -0.025em; line-height: 1.38; margin: 0; max-width: 52rem; }
 .agent-case .agent-kicker { color: var(--electric); font-family: "Courier New", Courier, monospace; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; }
-.agent-workflow { display: grid; grid-template-columns: repeat(3, 1fr); }
-.agent-workflow article { border-left: 2px solid var(--line); padding: 1.1rem 1.4rem 0.4rem; }
-.agent-workflow article:last-child { border-right: 2px solid var(--line); }
-.agent-workflow span { color: var(--electric); font-family: "Courier New", Courier, monospace; font-size: 0.76rem; font-weight: 700; }
-.agent-workflow h3 { font-size: clamp(1.3rem, 2vw, 1.7rem); letter-spacing: -0.04em; margin: 1.75rem 0 0.75rem; }
-.agent-workflow p { line-height: 1.5; }
 .agent-feedback { border: 2px solid var(--line); margin: 2.5rem 0 0; padding: 1.25rem; }
 .agent-feedback figcaption { display: flex; font-family: "Courier New", Courier, monospace; font-size: 0.74rem; font-weight: 700; gap: 0.75rem 1.5rem; justify-content: space-between; letter-spacing: 0.04em; text-transform: uppercase; }
 .agent-feedback figcaption span:first-child { color: var(--electric); }
@@ -187,13 +190,13 @@ footer { align-items: center; display: flex; font-size: 0.7rem; justify-content:
   footer { align-items: flex-start; flex-direction: column; gap: 0.5rem; }
   .cv-hero-grid, .cv-bottom-grid { grid-template-columns: 1fr; }
   .cv-actions { max-width: 17rem; }
+  .cv-disclosure > summary { align-items: flex-start; gap: 1rem; }
+  .cv-disclosure > summary h2 { font-size: clamp(1.8rem, 9vw, 3rem); }
+  .disclosure-toggle { margin-top: 1.55rem; }
   .capability-grid { grid-template-columns: 1fr; }
   .capability { border-left: 0; border-bottom: 2px solid var(--line); padding-inline: 0; }
   .capability:last-child { border-bottom: 0; border-right: 0; }
   .agent-case { grid-template-columns: 1fr; gap: 0.65rem; }
-  .agent-workflow { grid-template-columns: 1fr; }
-  .agent-workflow article { border-bottom: 2px solid var(--line); border-left: 0; padding-inline: 0; }
-  .agent-workflow article:last-child { border-bottom: 0; border-right: 0; }
   .agent-feedback figcaption { align-items: flex-start; flex-direction: column; gap: 0.35rem; }
   .role { grid-template-columns: 1fr; gap: 0.5rem; }
   .role-current { margin-inline: 0; padding-inline: 0; }
