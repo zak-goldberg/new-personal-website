@@ -25,9 +25,7 @@ export default function CvPage() {
       <nav className="site-nav" aria-label="Primary navigation">
         <a className="wordmark" href="/">ZAK GOLDBERG</a>
         <div className="nav-links">
-          <a href="/">Journey</a>
           <a aria-current="page" href="/cv">CV</a>
-          <a href="mailto:zak.goldberg@gmail.com">Contact</a>
         </div>
       </nav>
 

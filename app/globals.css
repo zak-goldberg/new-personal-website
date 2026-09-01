@@ -112,7 +112,8 @@ h2 { font-size: clamp(2rem, 4.5vw, 4.8rem); letter-spacing: -0.055em; line-heigh
 
 .next-section { background: var(--ink); color: var(--paper); min-height: 50vh; }
 .next-section h2 { max-width: 12ch; }
-.next-section > p:last-child { max-width: 32rem; }
+.next-section > p:not(.eyebrow) { line-height: 1.5; max-width: 32rem; }
+.next-section .button { margin-top: 1rem; min-width: 12rem; }
 
 footer { align-items: center; display: flex; font-size: 0.7rem; justify-content: space-between; padding: 1rem clamp(1.25rem, 5vw, 5rem); }
 

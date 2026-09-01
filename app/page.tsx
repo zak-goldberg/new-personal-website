@@ -15,10 +15,7 @@ export default function Home() {
       <nav className="site-nav" aria-label="Primary navigation">
         <a className="wordmark" href="#top">ZAK GOLDBERG</a>
         <div className="nav-links">
-          <a href="#journey">Journey</a>
           <a href="/cv">CV</a>
-          <a href="#projects">Projects</a>
-          <a href="#about">About</a>
         </div>
       </nav>
 
@@ -59,13 +56,14 @@ export default function Home() {
         </ol>
       </section>
 
-      <section className="next-section" id="projects">
-        <p className="eyebrow">02 / NEXT UP</p>
-        <h2>Projects, work, and life beyond the timeline.</h2>
-        <p>More of the site will take shape here through iteration.</p>
+      <section className="next-section" aria-labelledby="cv-cta-heading">
+        <p className="eyebrow">02 / THE DETAILS</p>
+        <h2 id="cv-cta-heading">Want the full picture?</h2>
+        <p>Explore my experience, technical practice, and current capabilities in the full CV.</p>
+        <a className="button button-secondary" href="/cv">View full CV <span aria-hidden="true">→</span></a>
       </section>
 
-      <footer id="about">
+      <footer>
         <span>© Zak Goldberg</span>
         <span>Curiosity backed by execution.</span>
       </footer>
