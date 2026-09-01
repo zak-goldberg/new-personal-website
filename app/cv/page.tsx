@@ -25,7 +25,7 @@ export default function CvPage() {
       <nav className="site-nav" aria-label="Primary navigation">
         <a className="wordmark" href="/">ZAK GOLDBERG</a>
         <div className="nav-links">
-          <a aria-current="page" href="/cv">CV</a>
+          <a aria-current="page" className="nav-cv" href="/cv">View CV <span aria-hidden="true">→</span></a>
         </div>
       </nav>
 
@@ -87,7 +87,7 @@ export default function CvPage() {
       <section className="cv-section experience" aria-labelledby="experience-heading">
         <div className="cv-section-heading"><p className="eyebrow">03 / EXPERIENCE</p><h2 id="experience-heading">Work that moves closer to the code.</h2></div>
         <div className="experience-list">
-          <article className="role role-current">
+          <article className="role">
             <div className="role-meta"><p>2025 - present</p><p>San Francisco Bay Area</p></div>
             <div><p className="role-company">Salesforce</p><h3>Software Engineer</h3><p className="role-intro">Building and improving real-time infrastructure-protection services.</p><ul>{salesforceHighlights.map((highlight) => <li key={highlight}>{highlight}</li>)}</ul></div>
           </article>

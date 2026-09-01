@@ -41,6 +41,8 @@ main { overflow: hidden; }
 
 .nav-links a:hover { color: var(--electric); }
 .nav-links a[aria-current="page"] { color: var(--electric); text-decoration: underline; text-underline-offset: 0.25rem; }
+.nav-cv { border: 2px solid var(--line); padding: 0.4rem 0.6rem; }
+.nav-cv:hover, .nav-cv[aria-current="page"] { background: var(--electric); color: white; text-decoration: none; }
 
 .hero, .journey, .next-section { padding: clamp(3.5rem, 9vw, 8rem) clamp(1.25rem, 5vw, 5rem); }
 
@@ -126,7 +128,7 @@ footer { align-items: center; display: flex; font-size: 0.7rem; justify-content:
 .cv-actions { display: flex; flex-direction: column; gap: 0.75rem; min-width: 11.5rem; }
 .button { border: 2px solid var(--line); display: inline-flex; font-family: "Courier New", Courier, monospace; font-size: 0.78rem; font-weight: 700; justify-content: space-between; letter-spacing: 0.04em; padding: 0.8rem 0.9rem; text-transform: uppercase; }
 .button-primary { background: var(--ink); color: var(--paper); }
-.button-secondary { background: var(--paper); }
+.button-secondary { background: var(--paper); color: var(--ink); }
 .button:hover { background: var(--electric); color: white; }
 .cv-meta { border-top: 2px solid var(--line); display: flex; flex-wrap: wrap; font-family: "Courier New", Courier, monospace; font-size: 0.73rem; font-weight: 700; gap: 0.7rem 1.5rem; letter-spacing: 0.025em; margin-top: 3rem; padding-top: 1rem; }
 .cv-meta a { text-decoration: underline; text-underline-offset: 0.2rem; }
@@ -163,7 +165,6 @@ footer { align-items: center; display: flex; font-size: 0.7rem; justify-content:
 .experience { background: #fff; }
 .experience-list { border-top: 2px solid var(--line); }
 .role { border-bottom: 2px solid var(--line); display: grid; gap: 2rem; grid-template-columns: minmax(9rem, 0.35fr) 1fr; padding: 1.5rem 0; }
-.role-current { background: #f1efff; margin-inline: -1rem; padding-inline: 1rem; }
 .role-meta, .role-company, .education-date { font-family: "Courier New", Courier, monospace; font-size: 0.74rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; }
 .role-meta p { margin-bottom: 0.4rem; }
 .role-company { color: var(--electric); margin-bottom: 0.6rem; }
@@ -200,5 +201,4 @@ footer { align-items: center; display: flex; font-size: 0.7rem; justify-content:
   .agent-case { grid-template-columns: 1fr; gap: 0.65rem; }
   .agent-feedback figcaption { align-items: flex-start; flex-direction: column; gap: 0.35rem; }
   .role { grid-template-columns: 1fr; gap: 0.5rem; }
-  .role-current { margin-inline: 0; padding-inline: 0; }
 }
