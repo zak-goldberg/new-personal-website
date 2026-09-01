@@ -15,7 +15,7 @@ export default function Home() {
       <nav className="site-nav" aria-label="Primary navigation">
         <a className="wordmark" href="#top">ZAK GOLDBERG</a>
         <div className="nav-links">
-          <a className="nav-cv" href="/cv">View CV <span aria-hidden="true">→</span></a>
+          <a href="/cv">CV</a>
         </div>
       </nav>
 

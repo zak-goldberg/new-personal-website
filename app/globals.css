@@ -41,9 +41,6 @@ main { overflow: hidden; }
 
 .nav-links a:hover { color: var(--electric); }
 .nav-links a[aria-current="page"] { color: var(--electric); text-decoration: underline; text-underline-offset: 0.25rem; }
-.nav-cv { border: 2px solid var(--line); padding: 0.4rem 0.6rem; }
-.nav-cv:hover, .nav-cv[aria-current="page"] { background: var(--electric); color: white; text-decoration: none; }
-
 .hero, .journey, .next-section { padding: clamp(3.5rem, 9vw, 8rem) clamp(1.25rem, 5vw, 5rem); }
 
 .hero { background: var(--lime); border-bottom: 2px solid var(--line); }
