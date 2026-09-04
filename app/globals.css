@@ -114,6 +114,71 @@ h2 { font-size: clamp(2rem, 4.5vw, 4.8rem); letter-spacing: -0.055em; line-heigh
 .next-section > p:not(.eyebrow) { line-height: 1.5; max-width: 32rem; }
 .next-section .button { margin-top: 1rem; min-width: 12rem; }
 
+.coffee-hero, .coffee-setup, .coffee-brewing, .coffee-gear {
+  padding: clamp(3.5rem, 8vw, 7rem) clamp(1.25rem, 5vw, 5rem);
+}
+
+.coffee-hero { background: var(--lime); border-bottom: 2px solid var(--line); }
+.coffee-hero h1 { margin-bottom: 1.5rem; max-width: none; }
+.coffee-hero > p:not(.eyebrow) { font-family: "Courier New", Courier, monospace; font-size: clamp(1rem, 1.7vw, 1.3rem); font-weight: 700; line-height: 1.4; max-width: 36rem; }
+.coffee-section-heading { margin-bottom: clamp(2.5rem, 5vw, 4rem); }
+.coffee-section-heading h2 { max-width: none; }
+.setup-figure { border: 2px solid var(--line); margin: 0; }
+.setup-figure img { display: block; height: auto; max-height: 44rem; object-fit: cover; width: 100%; }
+.setup-figure figcaption { border-top: 2px solid var(--line); display: flex; flex-wrap: wrap; font-family: "Courier New", Courier, monospace; font-size: 0.7rem; font-weight: 700; gap: 0.5rem 2rem; justify-content: space-between; letter-spacing: 0.045em; padding: 0.85rem 1rem; }
+.setup-copy { font-size: clamp(1.1rem, 2vw, 1.5rem); letter-spacing: -0.025em; line-height: 1.4; margin: 1.5rem 0 0; max-width: 38rem; }
+
+.coffee-brewing { background: var(--ink); border-block: 2px solid var(--line); color: var(--paper); }
+.coffee-brewing .eyebrow { color: var(--lime); }
+.coffee-grid { border-top: 2px solid currentColor; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.coffee-card { border-bottom: 2px solid currentColor; border-left: 2px solid currentColor; min-width: 0; }
+.coffee-card:nth-child(2n) { border-right: 2px solid currentColor; }
+.coffee-card-image { align-items: center; background: #e9e5d8; display: flex; justify-content: center; min-height: 13rem; overflow: hidden; }
+.coffee-card-image img { aspect-ratio: 1; display: block; height: 100%; object-fit: cover; transition: transform 180ms ease; width: 100%; }
+.coffee-card-image img.coffee-card-image-contain { object-fit: contain; }
+.coffee-card-image:hover img { transform: scale(1.035); }
+.coffee-card-copy { padding: 1rem 1rem 1.2rem; }
+.coffee-card-brew, .coffee-card-roaster, .coffee-card-facts, .coffee-source-link { font-family: "Courier New", Courier, monospace; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.04em; }
+.coffee-card-brew { color: var(--lime); margin-bottom: 1.25rem; }
+.coffee-card-roaster { margin-bottom: 0.45rem; }
+.coffee-card h3 { font-size: clamp(1.25rem, 2vw, 1.8rem); letter-spacing: -0.045em; line-height: 1; margin-bottom: 1.25rem; }
+.coffee-card-facts { line-height: 1.45; margin-bottom: 1rem; }
+.coffee-card-notes { font-size: 0.98rem; line-height: 1.4; margin-bottom: 1.4rem; }
+.coffee-source-link { border-bottom: 1px solid currentColor; display: inline-block; padding-bottom: 0.2rem; }
+.coffee-source-link:hover { color: var(--lime); }
+.coffee-empty-state { align-items: center; border-block: 2px solid currentColor; display: grid; gap: 1.5rem; grid-template-columns: minmax(5rem, 0.2fr) minmax(0, 1fr); padding: clamp(1.5rem, 3vw, 2.5rem) 0; }
+.coffee-empty-number { color: var(--lime); font-size: clamp(3rem, 6vw, 5rem); line-height: 1; margin: 0; text-align: center; }
+.coffee-empty-state h3 { font-size: clamp(1.6rem, 3vw, 2.6rem); letter-spacing: -0.045em; margin-bottom: 0.6rem; }
+.coffee-empty-state p:not(.coffee-empty-number) { line-height: 1.45; margin-bottom: 0; max-width: 39rem; }
+
+.coffee-gear { background: #efedff; }
+.gear-grid { border-block: 2px solid var(--line); display: grid; grid-template-columns: repeat(3, 1fr); }
+.gear-category { border-left: 2px solid var(--line); padding: 1.1rem 1.25rem 1.75rem; }
+.gear-category:last-child { border-right: 2px solid var(--line); }
+.gear-category h3 { color: var(--electric); font-family: "Courier New", Courier, monospace; font-size: 0.76rem; letter-spacing: 0.05em; margin: 0 0 2.25rem; }
+.gear-category ul { list-style: none; margin: 0; padding: 0; }
+.gear-category li { margin-bottom: 1.6rem; }
+.gear-category li:last-child { margin-bottom: 0; }
+.gear-category strong, .gear-category span { display: block; }
+.gear-category strong { font-size: clamp(1.1rem, 1.8vw, 1.4rem); letter-spacing: -0.035em; line-height: 1.05; }
+.gear-category span { font-family: "Courier New", Courier, monospace; font-size: 0.73rem; line-height: 1.35; margin-top: 0.45rem; }
+
+.hobbies-hero, .hobbies-list { padding: clamp(3.5rem, 8vw, 7rem) clamp(1.25rem, 5vw, 5rem); }
+.hobbies-hero { background: var(--lime); border-bottom: 2px solid var(--line); }
+.hobbies-hero h1 { max-width: none; }
+.hobbies-hero > p:not(.eyebrow) { font-family: "Courier New", Courier, monospace; font-size: clamp(1rem, 1.7vw, 1.3rem); font-weight: 700; line-height: 1.4; max-width: 40rem; }
+.hobbies-list { background: var(--paper); display: grid; gap: 1rem; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.hobby-card { border: 2px solid var(--line); color: var(--ink); display: flex; flex-direction: column; min-height: clamp(20rem, 31vw, 28rem); padding: 1.25rem; }
+.hobby-card:hover { box-shadow: 8px 8px 0 var(--ink); transform: translate(-4px, -4px); }
+.hobby-card-topline { display: flex; font-family: "Courier New", Courier, monospace; font-size: 0.72rem; font-weight: 700; justify-content: space-between; letter-spacing: 0.04em; }
+.hobby-card h2 { font-size: clamp(2.2rem, 4.2vw, 4.5rem); margin: auto 0 1rem; max-width: none; }
+.hobby-card p { font-size: 1rem; line-height: 1.45; margin-bottom: 0; max-width: 24rem; }
+.hobby-card-coffee { background: #efedff; }
+.hobby-card-coffee .hobby-card-topline span:last-child { color: var(--electric); }
+.hobby-card-running { background: #ffcf6e; }
+.hobby-card-outdoors { background: #b9e3c1; }
+.hobby-card-music { background: #ffb9d2; }
+
 footer { align-items: center; display: flex; font-size: 0.7rem; justify-content: space-between; padding: 1rem clamp(1.25rem, 5vw, 5rem); }
 
 .cv-page { background: var(--paper); }
@@ -186,6 +251,18 @@ footer { align-items: center; display: flex; font-size: 0.7rem; justify-content:
   .hero-grid { grid-template-columns: 1fr; }
   .portrait { max-width: 12rem; }
   .timeline { grid-template-columns: repeat(6, 12rem); }
+  .setup-figure figcaption { align-items: flex-start; flex-direction: column; }
+  .coffee-grid { grid-template-columns: 1fr; }
+  .coffee-card { border-left: 0; }
+  .coffee-card:nth-child(2n) { border-right: 0; }
+  .coffee-card-image { min-height: 18rem; }
+  .coffee-empty-state { grid-template-columns: 1fr; }
+  .coffee-empty-number { text-align: left; }
+  .gear-grid { grid-template-columns: 1fr; }
+  .gear-category { border-bottom: 2px solid var(--line); border-left: 0; padding-inline: 0; }
+  .gear-category:last-child { border-bottom: 0; border-right: 0; }
+  .hobbies-list { grid-template-columns: 1fr; }
+  .hobby-card { min-height: 16rem; }
   footer { align-items: flex-start; flex-direction: column; gap: 0.5rem; }
   .cv-hero-grid, .cv-bottom-grid { grid-template-columns: 1fr; }
   .cv-actions { max-width: 17rem; }

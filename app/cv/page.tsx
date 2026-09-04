@@ -26,6 +26,7 @@ export default function CvPage() {
         <a className="wordmark" href="/">ZAK GOLDBERG</a>
         <div className="nav-links">
           <a aria-current="page" href="/cv">CV</a>
+          <a href="/hobbies">HOBBIES</a>
         </div>
       </nav>
 
